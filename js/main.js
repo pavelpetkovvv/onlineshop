@@ -1,3 +1,90 @@
+//#region products list json
+//due to lack of backend the json array with products is directly in the js code
+let products= [
+    {
+        "ProductID": 1,
+        "ProductName": "Chai",
+        "UnitPrice": 18,
+        "UnitsInStock": 39,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    },
+    {
+        "ProductID": 2,
+        "ProductName": "Chang",
+        "UnitPrice": 19,
+        "UnitsInStock": 17,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    },
+    {
+        "ProductID": 3,
+        "ProductName": "Aniseed Syrup",
+        "UnitPrice": 10,
+        "UnitsInStock": 0,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    },
+    {
+        "ProductID": 4,
+        "ProductName": "Chef Anton's Cajun Seasoning",
+        "UnitPrice": 22,
+        "UnitsInStock": 53,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    },
+    {
+        "ProductID": 5,
+        "ProductName": "Chef Anton's Gumbo Mix",
+        "UnitPrice": 21.35,
+        "UnitsInStock": 0,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    },
+    {
+        "ProductID": 6,
+        "ProductName": "Grandma's Boysenberry Spread",
+        "UnitPrice": 25,
+        "UnitsInStock": 120,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    },
+    {
+        "ProductID": 7,
+        "ProductName": "Uncle Bob's Organic Dried Pears",
+        "UnitPrice": 30,
+        "UnitsInStock": 0,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    },
+    {
+        "ProductID": 8,
+        "ProductName": "Northwoods Cranberry Sauce",
+        "UnitPrice": 40,
+        "UnitsInStock": 0,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    },
+    {
+        "ProductID": 9,
+        "ProductName": "Mishi Kobe Niku",
+        "UnitPrice": 97,
+        "UnitsInStock": 29,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    },
+    {
+        "ProductID": 10,
+        "ProductName": "Ikura",
+        "UnitPrice": 31,
+        "UnitsInStock": 31,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
+    }
+]
+
+//#endregion
+
 //#region slideshow JS
 var slideIndex = 1;
 
@@ -32,82 +119,6 @@ function myLoop() {
 //#endregion
 
 //#region products display
-
-let products= [
-    {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
-        "UnitsInStock": 39,
-        "ImageName" : "./img/product-picture-1.jpg",
-        "ProductDescription" : "some description"
-    },
-    {
-        "ProductID": 2,
-        "ProductName": "Chang",
-        "UnitPrice": 19,
-        "UnitsInStock": 17,
-        "ImageName" : "./img/product-picture-1.jpg"
-    },
-    {
-        "ProductID": 3,
-        "ProductName": "Aniseed Syrup",
-        "UnitPrice": 10,
-        "UnitsInStock": 0,
-        "ImageName" : "./img/product-picture-1.jpg"
-    },
-    {
-        "ProductID": 4,
-        "ProductName": "Chef Anton's Cajun Seasoning",
-        "UnitPrice": 22,
-        "UnitsInStock": 53,
-        "ImageName" : "./img/product-picture-1.jpg"
-    },
-    {
-        "ProductID": 5,
-        "ProductName": "Chef Anton's Gumbo Mix",
-        "UnitPrice": 21.35,
-        "UnitsInStock": 0,
-        "ImageName" : "./img/product-picture-1.jpg"
-    },
-    {
-        "ProductID": 6,
-        "ProductName": "Grandma's Boysenberry Spread",
-        "UnitPrice": 25,
-        "UnitsInStock": 120,
-        "ImageName" : "./img/product-picture-1.jpg"
-    },
-    {
-        "ProductID": 7,
-        "ProductName": "Uncle Bob's Organic Dried Pears",
-        "UnitPrice": 30,
-        "UnitsInStock": 0,
-        "ImageName" : "./img/product-picture-1.jpg"
-    },
-    {
-        "ProductID": 8,
-        "ProductName": "Northwoods Cranberry Sauce",
-        "UnitPrice": 40,
-        "UnitsInStock": 0,
-        "ImageName" : "./img/product-picture-1.jpg"
-    },
-    {
-        "ProductID": 9,
-        "ProductName": "Mishi Kobe Niku",
-        "UnitPrice": 97,
-        "UnitsInStock": 29,
-        "ImageName" : "./img/product-picture-1.jpg"
-    },
-    {
-        "ProductID": 10,
-        "ProductName": "Ikura",
-        "UnitPrice": 31,
-        "UnitsInStock": 31,
-        "ImageName" : "./img/product-picture-1.jpg"
-    }
-]
-
-
 function createProductsTable(){
 
     //create new table in 'products-section-container' (which is already in shop.html)
@@ -350,3 +361,5 @@ function getProductUnitsInStock(productID){
         }
     }
 }
+
+

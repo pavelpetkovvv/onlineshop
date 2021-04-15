@@ -3,60 +3,80 @@
         "ProductID": 1,
         "ProductName": "Chai",
         "UnitPrice": 18,
-        "UnitsInStock": 39
+        "UnitsInStock": 39,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 2,
         "ProductName": "Chang",
         "UnitPrice": 19,
-        "UnitsInStock": 17
+        "UnitsInStock": 17,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 3,
         "ProductName": "Aniseed Syrup",
         "UnitPrice": 10,
-        "UnitsInStock": 0
+        "UnitsInStock": 0,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 4,
         "ProductName": "Chef Anton's Cajun Seasoning",
         "UnitPrice": 22,
-        "UnitsInStock": 53
+        "UnitsInStock": 53,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 5,
         "ProductName": "Chef Anton's Gumbo Mix",
         "UnitPrice": 21.35,
-        "UnitsInStock": 0
+        "UnitsInStock": 0,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 6,
         "ProductName": "Grandma's Boysenberry Spread",
         "UnitPrice": 25,
-        "UnitsInStock": 120
+        "UnitsInStock": 120,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 7,
         "ProductName": "Uncle Bob's Organic Dried Pears",
         "UnitPrice": 30,
-        "UnitsInStock": 0
+        "UnitsInStock": 0,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 8,
         "ProductName": "Northwoods Cranberry Sauce",
         "UnitPrice": 40,
-        "UnitsInStock": 0
+        "UnitsInStock": 0,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 9,
         "ProductName": "Mishi Kobe Niku",
         "UnitPrice": 97,
-        "UnitsInStock": 29
+        "UnitsInStock": 29,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 10,
         "ProductName": "Ikura",
         "UnitPrice": 31,
-        "UnitsInStock": 31
+        "UnitsInStock": 31,
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     }
 ]
