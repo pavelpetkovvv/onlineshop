@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    text-align: justify;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*header*/
+header{
+    display: block;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+footer{
+    height: 200px;
+    background-color: rgb(26, 26, 26);
+}
+
+.spacer{
+    margin-top: 50px;
+}
+
+.site-heading{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: xxx-large;
+}
+
+.heading-navigation{
+    text-decoration: none;
+    color: black;
+}
+
+.shopping-basket{
+    position: absolute;
+    width: 40px;
+    top: 50px;
+    right: 30px;
+}
+
+.shopping-basket:hover{
+    transform: scale(1.2, 1.2);
+}
+
+/*header END*/
+
+/*navigation bar*/
+.navigation-bar-desktop{
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.navigtion-buttons-container-desktop{
+    display: inline-flex;
+}
+
+.navigation-button-desktop{
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    border-right: 1px solid black;
+    border-bottom: 2px solid white;
+
+
+}
+
+.navigation-button-desktop:hover{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid black;
+
+}
+
+#leftmost-button{
+    border-left: 1px solid black;
+
+}
+
+/*navigation bar END*/
+
+
+/*slideshow*/
+.slideshow_image{
+    width: 100%;
+}
+
+.slide{
+    display: none;
+    animation: slide-up 2s ease;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slideshow_container{
+    position: relative;
+    display: flex;
+}
+
+@media screen and (max-width: 770px){
+    .message_outer{
+        display: none;
+    }
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(128,128,128, 0.7);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*slideshow END*/
+
+/*text*/
+section{
+    width: 80%;
+    margin: auto;
+}
+
+.section-heading{
+    color: white;
+    background-color: rgb(26, 26, 26);
+    border-radius: 5px;
+    text-align: center;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 30px;
+}
+
+.section-text{
+    color: black;
+}
+
+/*text END*/
+
+/*product*/
+.product-section{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+td{
+    padding: 10px;
+}
+
+.product{
+    width: 100%;
+    height: 0;
+    padding-bottom: 140%;
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 1200px) {
+    .product{
+        padding-bottom: 160%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .product{
+        padding-bottom: 180%;
+    }
+}
+
+.product-name{
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.product-image-container{
+    width: 90%;
+    margin: auto;
+}
+
+.product-image{
+    width: 100%;
+}
+
+.add-to-cart-button{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: x-large;
+}
+
+.add-to-cart-button:hover{
+    background-color: rgb(51, 51, 51);
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
