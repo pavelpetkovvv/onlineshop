@@ -39,7 +39,8 @@ let products= [
         "ProductName": "Chai",
         "UnitPrice": 18,
         "UnitsInStock": 39,
-        "ImageName" : "./img/product-picture-1.jpg"
+        "ImageName" : "./img/product-picture-1.jpg",
+        "ProductDescription" : "some description"
     },
     {
         "ProductID": 2,
@@ -106,7 +107,6 @@ let products= [
     }
 ]
 
-console.log(products.length);
 
 function createProductsTable(){
 
@@ -139,7 +139,8 @@ function createTableRow(appendToTableID, rowID){
 //create new table cell
 //pass ID of row to append cell to
 //pass name and price of product and source of image to be displayed  
-function createTableCell(appendToRowID, productName, produtImageSrc, productPrice){
+//pass units in stock of product
+function createTableCell(appendToRowID, productID, productName, produtImageSrc, productPrice, unitsInStock){
     var appendToRow = document.getElementById(appendToRowID); 
     
     var td = document.createElement("td");
@@ -147,6 +148,7 @@ function createTableCell(appendToRowID, productName, produtImageSrc, productPric
 
     var newProductDiv = document.createElement("div");
     newProductDiv.setAttribute('class', 'product');
+    newProductDiv.setAttribute('id', productID);
     td.appendChild(newProductDiv);
 
     var newProductName = document.createElement("div");
@@ -160,6 +162,8 @@ function createTableCell(appendToRowID, productName, produtImageSrc, productPric
 
     var newImage = document.createElement('img');
     newImage.setAttribute('class', 'product-image');
+    var functionCall = 'displayDetails(' + productID + ')';
+    newImage.setAttribute('onclick', functionCall);
     newImage.setAttribute('src', produtImageSrc);
     newImageContainer.appendChild(newImage);
 
@@ -169,24 +173,34 @@ function createTableCell(appendToRowID, productName, produtImageSrc, productPric
 
     var newPriceTag = document.createElement('p');
     newPriceTag.setAttribute('class', 'price-tag');
-    newPriceTag.innerHTML += productPrice;
+    newPriceTag.innerHTML += '$' + productPrice;
     newPriceTagContainer.appendChild(newPriceTag);
 
-    appendAddToCartButton(newProductDiv);
+    appendAddToCartButton(newProductDiv, unitsInStock);
 }
 
-function appendAddToCartButton(appendTo){
+function appendAddToCartButton(appendTo, unitsInStock){
+
     var newButtonContainer = document.createElement('div');
     newButtonContainer.setAttribute('class', 'add-to-cart-button-container');
     appendTo.appendChild(newButtonContainer);
 
     var newButton = document.createElement('button');
     newButton.setAttribute('class', 'add-to-cart-button');
-    newButton.innerHTML += 'Add to cart';
+
+    if(unitsInStock === 0){
+    newButton.setAttribute('inactive', 'true');
+    newButton.setAttribute('class', 'add-to-cart-button-inactive');
+
+    newButton.innerHTML += 'Out of stock';
+    }
+    else{
+        newButton.innerHTML += 'Add to cart';
+    }
     newButtonContainer.appendChild(newButton);
 }
 
-
+//always call on page open
 createProductsTable();
 
 for(var i = 0; i < products.length; i++){
@@ -199,6 +213,140 @@ for(var i = 0; i < products.length; i++){
         createTableRow('newProductsTable', rowName);
     }
 
-    console.log(rowName);
-    createTableCell(rowName, products[i].ProductName, products[i].ImageName, products[i].UnitPrice);
+    createTableCell(rowName,products[i].ProductID, products[i].ProductName, products[i].ImageName, products[i].UnitPrice, products[i].UnitsInStock);
+}
+
+//#endregion
+
+//#region Detaisl window
+
+function closeDetailsWindow(){
+    var detailsWindow = document.getElementById('details-window');
+    detailsWindow.remove();
+}
+
+function displayDetails(productID){
+
+    //check if details window is already open
+    if(document.getElementById('details-window')==undefined){
+
+    //create window
+    var newDetailsWindow = document.createElement('div');
+    newDetailsWindow.setAttribute('class', 'details-window');
+    newDetailsWindow.setAttribute('id', 'details-window');
+
+    //create left column
+    var leftColumn = document.createElement('div');
+    leftColumn.setAttribute('class', 'left-column');
+
+    var image = document.createElement('img');
+    image.setAttribute('class', 'details-window-image');
+    image.setAttribute('src', getProductImage(productID));
+
+    //create right column
+    var rightColumn = document.createElement('div');
+    rightColumn.setAttribute('class', 'right-column');
+
+    var name = document.createElement('h2');
+    name.setAttribute('class', 'details-window-emphasised');
+    name.innerHTML+=getProductName(productID);
+
+    var description = document.createElement('p');
+    description.setAttribute('class', 'details-window-text');
+    description.innerHTML+=getProductDescription(productID);
+
+    var price = document.createElement('h3');
+    price.setAttribute('class', 'details-window-emphasised');
+    price.innerHTML+='$' + getProductPrice(productID);
+
+    //append elements to columns
+    //left
+    leftColumn.appendChild(image);
+
+    //right
+    rightColumn.appendChild(name);
+    rightColumn.appendChild(description);
+    rightColumn.appendChild(price);
+
+
+    //create buttons
+    var buttonsContainer =  document.createElement('div');
+    buttonsContainer.setAttribute('class', 'buttons-container');
+
+    var addButton = document.createElement('button');
+    addButton.setAttribute('class', 'details-window-add');
+
+    if(getProductUnitsInStock(productID) === 0){
+        addButton.setAttribute('inactive', 'true');
+        addButton.setAttribute('class', 'add-to-cart-button-inactive');
+    
+        addButton.innerHTML += 'Out of stock';
+    }
+    else{
+        addButton.innerHTML += 'Add to cart';
+    }
+
+    var closeButton = document.createElement('buttn');
+    closeButton.setAttribute('class', 'details-window-close');
+    closeButton.setAttribute('onclick', 'closeDetailsWindow()');
+    closeButton.innerHTML+="Close";
+
+    //append buttons to container
+    buttonsContainer.appendChild(addButton);
+    buttonsContainer.appendChild(closeButton);
+
+    //append buttons to right column
+    rightColumn.appendChild(buttonsContainer);
+
+    //append columns to window
+    newDetailsWindow.appendChild(leftColumn);
+    newDetailsWindow.appendChild(rightColumn);
+
+    //append window to page
+    var detailsWindowContainer = document.getElementById('details-window-container');
+    detailsWindowContainer.appendChild(newDetailsWindow);
+    }
+}
+
+
+//getters by ID
+function getProductImage(productID){
+    for(var i = 0; i < products.length; i++){
+        if(products[i].ProductID == productID){
+            return products[i].ImageName;
+        }
+    }
+}
+
+function getProductName(productID){
+    for(var i = 0; i < products.length; i++){
+        if(products[i].ProductID == productID){
+            return products[i].ProductName;
+        }
+    }
+
+}
+
+function getProductDescription(productID){
+    for(var i = 0; i < products.length; i++){
+        if(products[i].ProductID == productID){
+            return products[i].ProductDescription;
+        }
+    }
+}
+
+function getProductPrice(productID){
+    for(var i = 0; i < products.length; i++){
+        if(products[i].ProductID == productID){
+            return products[i].UnitPrice;
+        }
+    }
+}
+
+function getProductUnitsInStock(productID){
+    for(var i = 0; i < products.length; i++){
+        if(products[i].ProductID == productID){
+            return products[i].UnitsInStock;
+        }
+    }
 }
