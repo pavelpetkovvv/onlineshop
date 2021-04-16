@@ -7,7 +7,7 @@ let products= [
         "UnitPrice": 18,
         "UnitsInStock": 39,
         "ImageSrc" : "./img/chai-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
     },
     {
         "ProductID": 2,
@@ -15,7 +15,8 @@ let products= [
         "UnitPrice": 19,
         "UnitsInStock": 17,
         "ImageSrc" : "./img/chang-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
+
     },
     {
         "ProductID": 3,
@@ -23,7 +24,8 @@ let products= [
         "UnitPrice": 10,
         "UnitsInStock": 0,
         "ImageSrc" : "./img/aniseed-syrup-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
+
     },
     {
         "ProductID": 4,
@@ -31,7 +33,8 @@ let products= [
         "UnitPrice": 22,
         "UnitsInStock": 53,
         "ImageSrc" : "./img/cajun-seasoning-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
+
     },
     {
         "ProductID": 5,
@@ -39,7 +42,7 @@ let products= [
         "UnitPrice": 21.35,
         "UnitsInStock": 0,
         "ImageSrc" : "./img/gumbo-mix-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
     },
     {
         "ProductID": 6,
@@ -47,7 +50,7 @@ let products= [
         "UnitPrice": 25,
         "UnitsInStock": 120,
         "ImageSrc" : "./img/boysenberry-spread-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
     },
     {
         "ProductID": 7,
@@ -55,7 +58,7 @@ let products= [
         "UnitPrice": 30,
         "UnitsInStock": 0,
         "ImageSrc" : "./img/dried-pears-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
     },
     {
         "ProductID": 8,
@@ -63,7 +66,7 @@ let products= [
         "UnitPrice": 40,
         "UnitsInStock": 0,
         "ImageSrc" : "./img/cranberry-sauce-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
     },
     {
         "ProductID": 9,
@@ -71,7 +74,7 @@ let products= [
         "UnitPrice": 97,
         "UnitsInStock": 29,
         "ImageSrc" : "./img/kobe-niku-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
     },
     {
         "ProductID": 10,
@@ -79,7 +82,7 @@ let products= [
         "UnitPrice": 31,
         "UnitsInStock": 31,
         "ImageSrc" : "./img/ikura-image.jpg",
-        "ProductDescription" : "some description"
+        "ProductDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis viverra mauris. Cras ut aliquam dolor. Pellentesque scelerisque volutpat lectus."
     }
 ]
 
