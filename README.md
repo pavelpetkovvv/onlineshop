@@ -4,7 +4,7 @@
 
 ## Overview
 
-The project represent a simple online shop (currntly for food products). The products are displayed in the `shop` section of the website as cells which show name, price and picture of the product. By clicking on the picture more details for the product are displayed.
+The project represent a simple online shop (currently for food products). The products are displayed in the `shop` section of the website as cells which show name, price and picture of the product. By clicking on the picture more details for the product are displayed.
 
 The products in the `shop` section are created dynamically by the JavaScrip code of the website. The window that displays on click on the image of given product is also dinamically created.
 
