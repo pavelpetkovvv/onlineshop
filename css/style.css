@@ -107,12 +107,6 @@ footer{
     display: flex;
 }
 
-@media screen and (max-width: 770px){
-    .message_outer{
-        display: none;
-    }
-}
-
 .prev,
 .next {
   cursor: pointer;
@@ -181,13 +175,13 @@ td{
     border: 1px solid black;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1260px) {
     .product{
         padding-bottom: 160%;
     }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 930px) {
     .product{
         padding-bottom: 180%;
     }
