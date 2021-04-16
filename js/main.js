@@ -6,7 +6,7 @@ let products= [
         "ProductName": "Chai",
         "UnitPrice": 18,
         "UnitsInStock": 39,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/chai-image.jpg",
         "ProductDescription" : "some description"
     },
     {
@@ -14,7 +14,7 @@ let products= [
         "ProductName": "Chang",
         "UnitPrice": 19,
         "UnitsInStock": 17,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/chang-image.jpg",
         "ProductDescription" : "some description"
     },
     {
@@ -22,7 +22,7 @@ let products= [
         "ProductName": "Aniseed Syrup",
         "UnitPrice": 10,
         "UnitsInStock": 0,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/aniseed-syrup-image.jpg",
         "ProductDescription" : "some description"
     },
     {
@@ -30,7 +30,7 @@ let products= [
         "ProductName": "Chef Anton's Cajun Seasoning",
         "UnitPrice": 22,
         "UnitsInStock": 53,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/cajun-seasoning-image.jpg",
         "ProductDescription" : "some description"
     },
     {
@@ -38,7 +38,7 @@ let products= [
         "ProductName": "Chef Anton's Gumbo Mix",
         "UnitPrice": 21.35,
         "UnitsInStock": 0,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/gumbo-mix-image.jpg",
         "ProductDescription" : "some description"
     },
     {
@@ -46,7 +46,7 @@ let products= [
         "ProductName": "Grandma's Boysenberry Spread",
         "UnitPrice": 25,
         "UnitsInStock": 120,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/boysenberry-spread-image.jpg",
         "ProductDescription" : "some description"
     },
     {
@@ -54,7 +54,7 @@ let products= [
         "ProductName": "Uncle Bob's Organic Dried Pears",
         "UnitPrice": 30,
         "UnitsInStock": 0,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/dried-pears-image.jpg",
         "ProductDescription" : "some description"
     },
     {
@@ -62,7 +62,7 @@ let products= [
         "ProductName": "Northwoods Cranberry Sauce",
         "UnitPrice": 40,
         "UnitsInStock": 0,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/cranberry-sauce-image.jpg",
         "ProductDescription" : "some description"
     },
     {
@@ -70,7 +70,7 @@ let products= [
         "ProductName": "Mishi Kobe Niku",
         "UnitPrice": 97,
         "UnitsInStock": 29,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/kobe-niku-image.jpg",
         "ProductDescription" : "some description"
     },
     {
@@ -78,7 +78,7 @@ let products= [
         "ProductName": "Ikura",
         "UnitPrice": 31,
         "UnitsInStock": 31,
-        "ImageName" : "./img/product-picture-1.jpg",
+        "ImageSrc" : "./img/ikura-image.jpg",
         "ProductDescription" : "some description"
     }
 ]
@@ -224,12 +224,12 @@ for(var i = 0; i < products.length; i++){
         createTableRow('newProductsTable', rowName);
     }
 
-    createTableCell(rowName,products[i].ProductID, products[i].ProductName, products[i].ImageName, products[i].UnitPrice, products[i].UnitsInStock);
+    createTableCell(rowName,products[i].ProductID, products[i].ProductName, products[i].ImageSrc, products[i].UnitPrice, products[i].UnitsInStock);
 }
 
 //#endregion
 
-//#region Detaisl window
+//#region Details window
 
 function closeDetailsWindow(){
     var detailsWindow = document.getElementById('details-window');
@@ -324,7 +324,7 @@ function displayDetails(productID){
 function getProductImage(productID){
     for(var i = 0; i < products.length; i++){
         if(products[i].ProductID == productID){
-            return products[i].ImageName;
+            return products[i].ImageSrc;
         }
     }
 }

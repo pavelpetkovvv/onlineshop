@@ -55,7 +55,7 @@ footer{
     display: inline-flex;
 }
 
-.navigation-button-desktop{
+.navigation-button-desktop, .navigation-button-desktop-active{
     padding: 15px;
     text-decoration: none;
     color: black;
@@ -63,6 +63,10 @@ footer{
     border-bottom: 2px solid white;
 
 
+}
+
+.navigation-button-desktop-active{
+    border-bottom: 2px solid black;
 }
 
 .navigation-button-desktop:hover{
@@ -192,8 +196,8 @@ td{
 .product-name{
     display: block;
     width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .product-image-container{
@@ -203,6 +207,7 @@ td{
 
 .product-image{
     width: 100%;
+    border-radius: 5px;
 }
 
 .product-image:hover{
