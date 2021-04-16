@@ -1,6 +1,6 @@
 # OnlineShop
 
-*solution to assignment for Software Engineer Inter position at Progress*
+*solution to assignment for Software Engineer Intern position at Progress*
 
 ## Overview
 
